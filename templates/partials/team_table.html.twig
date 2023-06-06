@@ -1,0 +1,63 @@
+<table id="teams-table" class="my-2 table table-sm table-striped table-bordered" style="">
+    <thead>
+    <tr>
+        <th>Actions</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Price</th>
+        <th>Deals</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for key, player in team.players  %}
+        <tr>
+            <td>
+                {%  if team.getTeamManager.user.id != app.user.id %}
+                    {% if app.user.isManager %}
+                        {% if player.hasPendingDeal %}
+                            <small class="p-1 alert-danger">#}
+                                <i class="fa fa-info-circle"></i> {{ 'In pending action' | trans }}
+                            </small>
+                        {% else %}
+                            <button class="btn btn-sm btn-secondary">Buy</button>
+                        {% endif %}
+                    {% else %}
+                        <small class="p-1 alert-danger">
+                            <i class="fa fa-info-circle"></i> {{ 'Allowed for Team Manager users only' | trans }}
+                        </small>
+                    {% endif %}
+                {% endif %}
+            </td>
+            <td>{{ player.id }}</td>
+            <td>{{ player.user.name }}</td>
+            <td>{{ player.surname }}</td>
+            <td>{{ player.price | format_currency('USD') }}</td>
+            <td>{{ player.deals.count }}</td>
+{#            <td>#}
+{#                {% if ( (is_granted('ROLE_ADMIN')) or (team.getTeamManager.user.id == app.user.id)) %}#}
+{#                    {{ team.money | format_currency('USD') }}#}
+{#                {% else %}#}
+{#                    <small class="p-1 alert-danger">#}
+{#                        <i class="fa fa-info-circle"></i>#}
+{#                        {{ 'Not allow to see this field' | trans }}#}
+{#                    </small>#}
+{#                {% endif %}#}
+{#            </td>#}
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>Actions</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Price</th>
+        <th>Deals</th>
+    </tr>
+    </tfoot>
+</table>
+

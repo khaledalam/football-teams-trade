@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Football Teams Trade | Team{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <div class="card">
+            <h4 class="text-center text-muted my-3">
+                <i class="fa fa-futbol"></i>
+                Football Teams Trade
+            </h4>
+            <div class="container">
+
+                <h2 class="text-center ">Team: {{ team.name }}</h2>
+
+                {% include "partials/team_table.html.twig" %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

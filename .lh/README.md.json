@@ -1,0 +1,42 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1686077436109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686077441621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,18 +38,18 @@\n \n \n ### Auth\n \n-Admin:<>\n-Email: admin@example.com\n+Admin:<br>\n+Email: admin@example.com<br>\n Pass: password\n \n-Team Manager:\n-Email: team1@example.com\n+Team Manager:<br>\n+Email: team1@example.com<br>\n Pass: team1password\n \n-Player:\n-Email: player1@example.com\n+Player:<br>\n+Email: player1@example.com<br>\n Pass: player1password\n \n \n 2023-06-04T19:47:08+00:00 [info] User Deprecated: The \"url\" connection parameter is deprecated. Please use Doctrine\\DBAL\\Tools\\DsnParser to parse a database url before calling Doctrine\\DBAL\\DriverManager. (DriverManager.php:256 called by DriverManager.php:172, https://github.com/doctrine/dbal/pull/5843, package doctrine/dbal)\n"
+                },
+                {
+                    "date": 1686077453475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n <br />\n \n \n-!! App & Doc in progress !!\n+#!! App & Doc in progress !!\n \n doctrine/annotations<br/>\n doctrine/orm<br/>\n doctrine/doctrine-bundle<br/>\n@@ -51,8 +51,10 @@\n Email: player1@example.com<br>\n Pass: player1password\n \n \n+<hr />\n+\n 2023-06-04T19:47:08+00:00 [info] User Deprecated: The \"url\" connection parameter is deprecated. Please use Doctrine\\DBAL\\Tools\\DsnParser to parse a database url before calling Doctrine\\DBAL\\DriverManager. (DriverManager.php:256 called by DriverManager.php:172, https://github.com/doctrine/dbal/pull/5843, package doctrine/dbal)\n 2023-06-04T19:47:08+00:00 [info] User Deprecated: Doctrine\\DBAL\\Connection::getEventManager is deprecated. (Connection.php:296 called by EntityManager.php:167, https://github.com/doctrine/dbal/issues/5784, package doctrine/dbal)\n 2023-06-04T19:47:08+00:00 [info] User Deprecated: Doctrine\\DBAL\\Platforms\\AbstractPlatform::usesSequenceEmulatedIdentityColumns is deprecated. (AbstractPlatform.php:3945 called by ClassMetadataFactory.php:626, https://github.com/doctrine/dbal/pull/5513, package doctrine/dbal)\n \n"
+                },
+                {
+                    "date": 1686077458629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n # Symfony Docker\n \n+## !! App & Doc in progress !!\n \n <img src=\"login.png\" width=\"500\">\n <hr />\n <img src=\"teams.png\" width=\"500\">\n@@ -9,10 +10,10 @@\n \n <br />\n \n \n-#!! App & Doc in progress !!\n \n+\n doctrine/annotations<br/>\n doctrine/orm<br/>\n doctrine/doctrine-bundle<br/>\n doctrine/doctrine-migrations-bundle<br/>\n"
+                },
+                {
+                    "date": 1686077463808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-# Symfony Docker\n+# F\n \n ## !! App & Doc in progress !!\n \n <img src=\"login.png\" width=\"500\">\n"
+                },
+                {
+                    "date": 1686077469161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-# F\n+# Football Teams Trade |\n \n ## !! App & Doc in progress !!\n \n <img src=\"login.png\" width=\"500\">\n"
+                },
+                {
+                    "date": 1686077476663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-# Football Teams Trade |\n+# Football Teams Trade | Symfony \n \n ## !! App & Doc in progress !!\n \n <img src=\"login.png\" width=\"500\">\n"
+                }
+            ],
+            "date": 1686077436109,
+            "name": "Commit-0",
+            "content": "# Symfony Docker\n\n\n<img src=\"login.png\" width=\"500\">\n<hr />\n<img src=\"teams.png\" width=\"500\">\n<hr />\n<img src=\"new-team.png\" width=\"500\">\n\n<br />\n\n\n!! App & Doc in progress !!\n\ndoctrine/annotations<br/>\ndoctrine/orm<br/>\ndoctrine/doctrine-bundle<br/>\ndoctrine/doctrine-migrations-bundle<br/>\nsymfony/security-bundle<br/>\norm-fixtures<br/>\nsymfony/orm-pack<br/>\n\nformat_currency filter:<br/>\ncomposer require twig/intl-extra<br/>\ncomposer require twig/extra-bundle<br/>\n\n\ntemplate engine: twig<br/>\n\n\n- [x] Admin\n- [x] Team Manager\n- [x] Player\n\n\n- [x] Multi-languages\n\n\n\n### Auth\n\nAdmin:<>\nEmail: admin@example.com\nPass: password\n\nTeam Manager:\nEmail: team1@example.com\nPass: team1password\n\nPlayer:\nEmail: player1@example.com\nPass: player1password\n\n\n2023-06-04T19:47:08+00:00 [info] User Deprecated: The \"url\" connection parameter is deprecated. Please use Doctrine\\DBAL\\Tools\\DsnParser to parse a database url before calling Doctrine\\DBAL\\DriverManager. (DriverManager.php:256 called by DriverManager.php:172, https://github.com/doctrine/dbal/pull/5843, package doctrine/dbal)\n2023-06-04T19:47:08+00:00 [info] User Deprecated: Doctrine\\DBAL\\Connection::getEventManager is deprecated. (Connection.php:296 called by EntityManager.php:167, https://github.com/doctrine/dbal/issues/5784, package doctrine/dbal)\n2023-06-04T19:47:08+00:00 [info] User Deprecated: Doctrine\\DBAL\\Platforms\\AbstractPlatform::usesSequenceEmulatedIdentityColumns is deprecated. (AbstractPlatform.php:3945 called by ClassMetadataFactory.php:626, https://github.com/doctrine/dbal/pull/5513, package doctrine/dbal)\n\n\n```\n\nrm ./src/Migrations/* 2> /dev/null ;\nphp bin/console doctrine:database:drop --force --no-interaction &&\nphp bin/console doctrine:migrations:diff --no-interaction\n\n\n\nphp bin/console doctrine:database:drop --force --no-interaction &&\nphp bin/console doctrine:database:create --no-interaction&& \nphp bin/console  doctrine:migrations:migrate --no-interaction&&\n\nphp bin/console  doctrine:fixture:load --no-interaction\n\n\ndocker compose down --remove-orphans\n\ndocker compose up -d\n\n\n```\n"
+        }
+    ]
+}

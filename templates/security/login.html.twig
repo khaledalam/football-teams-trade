@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Football Teams Trade | Log in!{% endblock %}
+
+{% block body %}
+    <div class="container my-5 card p-3">
+        {% if error %}
+            <div class="alert alert-danger">
+                <i class="fa fa-info-circle"></i>
+                {{ error.messageKey | trans }}
+            </div>
+        {% endif %}
+
+
+        <h4 class="text-center text-muted my-3">
+            <i class="fa fa-futbol"></i>
+            Football Teams Trade
+        </h4>
+
+        <hr />
+
+        <form action="{{ path('app_login') }}" method="POST">
+
+            <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">
+                    <i class="fa fa-envelope"></i>
+                    Email
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Enter email address" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">
+                    <i class="fa fa-eye-slash"></i>
+                    Password
+                </label>
+                <div class="col-sm-10">
+                    <input type="password" id="password" name="_password" class="form-control" placeholder="Enter password">
+                </div>
+            </div>
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}"
+            >
+
+
+            {# If you want to control the URL the user is redirected to on success
+        <input type="hidden" name="_target_path" value="/account"> #}
+
+            <button type="submit" class="btn btn-primary my-2">login</button>
+
+            <div class="form-group mt-5">
+
+
+                <script>
+                    function copyFunc(field_id) {
+                        // Get the text field
+                        let copyText = document.getElementById(field_id);
+
+                        // Copy the text inside the text field
+                        navigator.clipboard.writeText(copyText.innerText);
+
+
+                    }
+                </script>
+
+                <small id="emailHelp" class="form-text text-muted">
+                    <b>Admin:</b><br/>
+                    Email: <span id="login_admin_email">admin@example.com</span> <i class="fa fa-copy" style="cursor:pointer;" onclick="copyFunc('login_admin_email')"></i><br />
+                    Pass: <span id="login_admin_password">password</span> <i class="fa fa-copy" style="cursor:pointer;" onclick="copyFunc('login_admin_password')"></i> <br />
+                    <hr />
+                    <b>Team Manager:</b><br/>
+                    Email: <span id="login_team_manager_email">team1@example.com</span> <i class="fa fa-copy" style="cursor:pointer;" onclick="copyFunc('login_team_manager_email')"></i><br />
+                    Pass: <span id="login_team_manager_password">team1password</span> <i class="fa fa-copy" style="cursor:pointer;" onclick="copyFunc('login_team_manager_password')"></i><br />
+                    <hr />
+                    <b>Player:</b><br/>
+                    Email: <span id="login_team_player_email">player1@example.com</span> <i class="fa fa-copy" style="cursor:pointer;" onclick="copyFunc('login_team_player_email')"></i><br />
+                    Pass: <span id="login_team_player_password">player1password</span> <i class="fa fa-copy" style="cursor:pointer;" onclick="copyFunc('login_team_player_password')"></i><br />
+
+                </small>
+
+
+            </div>
+
+        </form>
+    </div>
+{% endblock %}
+

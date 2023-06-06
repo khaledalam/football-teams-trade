@@ -1,0 +1,43 @@
+<table id="teams-table" class="my-2 table table-sm table-striped table-bordered" style="">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Players</th>
+        <th>Money Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for key, team in teams  %}
+        <tr>
+            <td>{{ team.id }}</td>
+            <td><a href="/team/{{ team.name }}">{{ team.name }}</a></td>
+            <td>{{ team.country }}</td>
+            <td>{{ team.getPlayers.count }}</td>
+            <td>
+                {% if ( (is_granted('ROLE_ADMIN')) or (team.getTeamManager.user.id == app.user.id)) %}
+                    {{ team.money | format_currency('USD') }}
+                {% else %}
+                    <small class="p-1 alert-danger">
+                        <i class="fa fa-info-circle"></i>
+                        {{ 'Not allow to see this field' | trans }}
+                    </small>
+                {% endif %}
+            </td>
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Players</th>
+        <th>Money Balance</th>
+    </tr>
+    </tfoot>
+</table>
+
