@@ -4,6 +4,7 @@
 
 ## !! App & Doc are still in progress !!
 
+<img src="screenshots/uml.png">
 
 ### Roles:
 - [x] Admin
