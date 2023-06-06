@@ -9,6 +9,8 @@
 <img src="screenshots/teams.png">
 <hr />
 <img src="screenshots/new-team.png">
+<hr />
+<img src="screenshots/team.png">
 
 <br />
 
