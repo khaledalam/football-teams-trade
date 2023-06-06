@@ -1,6 +1,6 @@
 # Football Teams Trade | Symfony v6^
 
-### Symfony app that allow to teams to buy/sell players.
+### Symfony app that allow teams to buy/sell players.
 
 ## !! App & Doc are still in progress !!
 
@@ -23,6 +23,7 @@
 ### Backend
 - Database: SQLite
 - Docker(-compose)
+- [ ] Testing: PHPUnit
 - 
 
 <img src="screenshots/login.png">
