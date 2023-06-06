@@ -6,7 +6,7 @@
 
 <img src="screenshots/login.png">
 <hr />
-<img src="screenshots/teams.png">
+<img src="screenshots/all_teams.png">
 <hr />
 <img src="screenshots/new-team.png">
 <hr />
