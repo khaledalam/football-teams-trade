@@ -1,16 +1,16 @@
 # Football Teams Trade | Symfony v6^
 
-## !! App & Doc in progress !!
+### Symfony app that allow to teams to buy/sell players.
 
-<img src="login.png" width="500">
+## !! App & Doc are still in progress !!
+
+<img src="screenshots/login.png">
 <hr />
-<img src="teams.png" width="500">
+<img src="screenshots/teams.png">
 <hr />
-<img src="new-team.png" width="500">
+<img src="screenshots/new-team.png">
 
 <br />
-
-
 
 
 doctrine/annotations<br/>
@@ -26,16 +26,16 @@ composer require twig/intl-extra<br/>
 composer require twig/extra-bundle<br/>
 
 
-template engine: twig<br/>
-
-
+Roles:
 - [x] Admin
 - [x] Team Manager
 - [x] Player
 
-
+Features:
 - [x] Multi-languages
 
+
+Template engine: twig<br/>
 
 
 ### Auth
@@ -59,25 +59,19 @@ Pass: player1password
 2023-06-04T19:47:08+00:00 [info] User Deprecated: Doctrine\DBAL\Connection::getEventManager is deprecated. (Connection.php:296 called by EntityManager.php:167, https://github.com/doctrine/dbal/issues/5784, package doctrine/dbal)
 2023-06-04T19:47:08+00:00 [info] User Deprecated: Doctrine\DBAL\Platforms\AbstractPlatform::usesSequenceEmulatedIdentityColumns is deprecated. (AbstractPlatform.php:3945 called by ClassMetadataFactory.php:626, https://github.com/doctrine/dbal/pull/5513, package doctrine/dbal)
 
+<hr />
 
 ```
-
 rm ./src/Migrations/* 2> /dev/null ;
 php bin/console doctrine:database:drop --force --no-interaction &&
 php bin/console doctrine:migrations:diff --no-interaction
 
-
-
 php bin/console doctrine:database:drop --force --no-interaction &&
-php bin/console doctrine:database:create --no-interaction&& 
-php bin/console  doctrine:migrations:migrate --no-interaction&&
-
+php bin/console doctrine:database:create --no-interaction && 
+php bin/console  doctrine:migrations:migrate --no-interaction &&
 php bin/console  doctrine:fixture:load --no-interaction
 
 
 docker compose down --remove-orphans
-
 docker compose up -d
-
-
 ```
