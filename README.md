@@ -4,6 +4,27 @@
 
 ## !! App & Doc are still in progress !!
 
+
+### Roles:
+- [x] Admin
+- [x] Team Manager
+- [x] Player
+
+### Features:
+- [x] Multi-languages
+
+
+### Frontend
+- Template Engine: twig
+- Bootstrap
+- JQuery
+-
+
+### Backend
+- Database: SQLite
+- Docker(-compose)
+- 
+
 <img src="screenshots/login.png">
 <hr />
 <img src="screenshots/all_teams.png">
@@ -27,17 +48,6 @@ format_currency filter:<br/>
 composer require twig/intl-extra<br/>
 composer require twig/extra-bundle<br/>
 
-
-Roles:
-- [x] Admin
-- [x] Team Manager
-- [x] Player
-
-Features:
-- [x] Multi-languages
-
-
-Template engine: twig<br/>
 
 
 ### Auth
