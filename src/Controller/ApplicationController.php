@@ -98,6 +98,41 @@ class ApplicationController extends AbstractController
         }
     }
 
+    #[Route('/update-team-money', name: 'app_update_team_money', methods: ['POST'])]
+    public function update_team_money(Request $request, EntityManagerInterface $em, TeamRepository $teamRepository): Response
+    {
+        $teamId = $request->get('teamId');
+        $money = $request->get('money');
+        $team = $teamRepository->find($teamId);
+
+        if (!$team) {
+            $this->redirectToRoute('app_homepage');
+        }
+
+        if (!is_numeric($money) || $money < 0) {
+            return $this->render('team.html.twig', [
+                'team' => $team,
+                'success' => 'Invalid money input.'
+            ]);
+        }
+        try {
+            $team->setMoney($money);
+
+            $em->persist($team);
+            $em->flush();
+
+            return $this->render('team.html.twig', [
+                'team' => $team,
+                'success' => 'Team money balance updated!'
+            ]);
+        } catch (\Exception $e) {
+            return $this->render('team.html.twig', [
+                'team' => $team,
+                'error' => 'Fail to update team money balance.',
+            ]);
+        }
+    }
+
     #[Route('/lang', name: 'app_lang', methods: ['POST'])]
     public function lang(Request $request)
     {

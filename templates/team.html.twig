@@ -13,7 +13,26 @@
 
                 <h2 class="text-center ">Team: {{ team.name }}</h2>
 
+                {% if (error ?? null) %}
+                    <div class="alert alert-danger">
+                        <i class="fa fa-info-circle"></i>
+                        {{ (error.messageKey ?? error ?? '') | trans }}
+                        {{ error }}
+                    </div>
+                {% elseif (success ?? null) %}
+                    <div class="alert alert-success">
+                        <i class="fa fa-info-circle"></i>
+                        {{ success | trans }}
+                    </div>
+                {% endif %}
+
+                {% if is_granted('ROLE_ADMIN')  %}
+                    {% include "partials/team_money_balance.html.twig" %}
+                {% endif %}
+
                 {% include "partials/team_table.html.twig" %}
+
+
             </div>
         </div>
 

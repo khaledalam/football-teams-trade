@@ -7,24 +7,36 @@
 <img src="screenshots/uml.png">
 
 ### Roles:
+- [ ] Master
 - [x] Admin
 - [x] Team Manager
 - [x] Player
 
 ### Features:
-- [x] Multi-languages
+- [ ] Multi-languages
 
 
 ### Frontend
-- Template Engine: twig
-- Bootstrap
-- JQuery
+- [x] Template Engine: twig
+- [x] Bootstrap
+- [x] JQuery
 -
 
 ### Backend
-- Database: SQLite
-- Docker(-compose)
-- [ ] Testing: PHPUnit
+- [x] Database: SQLite
+- [x] Docker(-compose) 
+- [ ] Testing: PHPUnit [coverage %]
+- 
+
+## Functionalities
+- [x] Update team money balance [Admin]
+- [x] See all teams money balance [Admin]
+- [x] See player info page [Admin, Team Manager, Player]
+- [ ] Perform buy player action [Team Manager]
+- [ ] Perform [Accept/Reject] selling player [Team Manager]
+- [ ] 
+---
+- [ ] RSS teams and players updates
 - 
 
 <img src="screenshots/login.png">

@@ -1,0 +1,14 @@
+<form action="{{ path('app_update_team_money') }}" method="post">
+
+    <div class="form-group mb-3">
+        <label for="newTeamInputName">Team Money Balance</label>
+        <input type="text" class="form-control" id="money" name="money" value="{{ team.money }}">
+        <input type="hidden" class="form-control" id="teamId" name="teamId" value="{{ team.id }}">
+    </div>
+    <div class="form-group my-4">
+        <button class="btn btn-sm btn-primary">
+            <i class="fa fa-pen"></i>
+            Update
+        </button>
+    </div>
+</form>
